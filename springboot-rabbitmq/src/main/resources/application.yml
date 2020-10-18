@@ -1,4 +1,12 @@
 spring:
   rabbitmq:
     publisher-returns: true
-    publisher-confirm-type: correlated
+    publisher-confirm-type: SIMPLE
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 1
